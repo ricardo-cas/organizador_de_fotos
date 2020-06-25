@@ -3,6 +3,8 @@ import shutil
 from PIL import Image
 from datetime import datetime
 
+tipos = ['jpg','jpeg','JPG','JPEG']
+
 # Define como será a criação da estrutura de pastas para organização das imagens baseadas na data de criação da foto
 def caminho_da_pasta_com_data_de_criacao_da_foto(arquivo):
     date = data_de_criacao_da_foto(arquivo)
@@ -28,12 +30,21 @@ def move_fotos(arquivo):
         os.makedirs(nova_pasta)
     shutil.move(arquivo, nova_pasta + '/' + arquivo)
 
+def organiza():
+    fotos = [
+        filename for filename in os.listdir('.') if any(filename.endswith(ext) for ext in tipos)
+    ]
+    for filename in fotos:
+        move_fotos(filename)
+
 #  Testes de resultado
 
-print('Data de criação:')
-print(data_de_criacao_da_foto('ny.jpg'))
-print('Estrutura de como será a criação da pasta baseada no ano de criacao da foto:')
-print(caminho_da_pasta_com_data_de_criacao_da_foto('ny.jpg'))
+# print('Data de criação:')
+# print(data_de_criacao_da_foto('ny.jpg'))
+# print('Estrutura de como será a criação da pasta baseada no ano de criacao da foto:')
+# print(caminho_da_pasta_com_data_de_criacao_da_foto('ny.jpg'))
+print(organiza())
+
 # print('Agora vai começar a criação da pasta e mover o arquivo para a nova pasta')
 # print(move_fotos('ny.jpg'))
 # print(move_fotos('a.jpg'))
