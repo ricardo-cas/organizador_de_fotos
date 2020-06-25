@@ -58,14 +58,14 @@ def organiza():
 
 #  Testes de resultado
 
-print('Data de criação:')
-print(data_de_criacao_da_foto('ny.jpg'))
+# print('Data de criação:')
+# print(data_de_criacao_da_foto('ny.jpg'))
 # print('Estrutura de como será a criação da pasta baseada no ano de criacao da foto:')
-print(caminho_da_pasta_com_data_de_criacao_da_foto('ny.jpg'))
-# print(organiza())
+# print(caminho_da_pasta_com_data_de_criacao_da_foto('ny.jpg'))
+print(organiza())
 
 # print('Agora vai começar a criação da pasta e mover o arquivo para a nova pasta')
-print(move_fotos('ny.jpg'))
+# print(move_fotos('ny.jpg'))
 # print(move_fotos('a.jpg'))
 # print(move_fotos('b.jpg'))
 # print(move_fotos('c.jpg'))
