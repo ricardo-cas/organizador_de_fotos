@@ -23,17 +23,6 @@ def data_de_criacao_da_foto(arquivo):
 
     return(data)
 
-# def data_de_criacao_da_foto(arquivo):
-#     foto = Image.open(arquivo)
-#     informacao = foto.getexif()
-#     if 36867 in informacao:
-#         data = informacao[36867]
-#         data = datetime.strptime(data, '%Y:%m:%d %H:%M:%S')
-#     else:
-#         data = datetime.fromtimestamp(os.path.getatime(arquivo))
-#     return(data)
-
-
 # função que move as fotos para a pasta criada
 
 def move_fotos(arquivo):
@@ -49,8 +38,21 @@ def organiza():
     for filename in fotos:
         move_fotos(filename)
 
-
 print(organiza())
+
+
+# def data_de_criacao_da_foto(arquivo):
+#     foto = Image.open(arquivo)
+#     informacao = foto.getexif()
+#     if 36867 in informacao:
+#         data = informacao[36867]
+#         data = datetime.strptime(data, '%Y:%m:%d %H:%M:%S')
+#     else:
+#         data = datetime.fromtimestamp(os.path.getatime(arquivo))
+#     return(data)
+
+
+
 
 #  Testes de resultado
 
