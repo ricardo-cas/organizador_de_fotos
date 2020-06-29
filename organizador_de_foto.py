@@ -15,7 +15,7 @@ def caminho_da_pasta_com_data_de_criacao_da_foto(arquivo):
 def data_de_criacao_da_foto(arquivo):
     foto = Image.open(arquivo)
     informacao = foto.getexif()
-    if 36867 in informacao:
+    if 36867 in informacao: # o código 36867 é referente a informação de data de criação do arquivo
         data = informacao[36867]
         data = datetime.strptime(data, '%Y:%m:%d %H:%M:%S')
     else:
