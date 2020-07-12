@@ -38,8 +38,10 @@ def organiza():
     for filename in fotos:
         move_fotos(filename)
 
-print(organiza())
+# print(organiza())
 
+if __name__ == "__main__":
+    organiza()
 
 # def data_de_criacao_da_foto(arquivo):
 #     foto = Image.open(arquivo)
