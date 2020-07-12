@@ -4,7 +4,7 @@ from PIL import Image
 from datetime import datetime
 
 #lista com tipos aceitos para executar a movimentação das fotos.
-tipos = ['jpg','jpeg','JPG','JPEG']
+tipos = ['jpg','jpeg','JPG','JPEG','png','PNG']
 
 # Define como será a criação da estrutura de pastas para organização das imagens baseadas na data de criação da foto
 def caminho_da_pasta_com_data_de_criacao_da_foto(arquivo):
